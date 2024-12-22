@@ -12,13 +12,11 @@ How to install
   - Create a database called "lectios" in DynamoDB with partition key "school" (in case you want a multi-school system) and sort key "accno". Import data into DynamoDB using a CSV file. The CSV file should have data with 3 columns - school, accno, title.
 
 - Lambda
- - Implement a Lambda function with the code provided. Select runtime as NodeJS 18.x. 
+  - Implement a Lambda function with the code provided. Select runtime as NodeJS 18.x. 
 
 - API Gateway
-
- - Deploy an API with a GET method for "/". The method request should have a required URL query string parameter "q". The integration request should have a mapping template: \{ "school": "$input.params('school')","expression": "$input.params('expression')"\}.
- - The URL of your API deployment should be configured in search.js (line 2) in the front end app. 
+  - Deploy an API with a GET method for "/". The method request should have a required URL query string parameter "q". The integration request should have a mapping template: \{ "school": "$input.params('school')","expression": "$input.params('expression')"\}.
+  - The URL of your API deployment should be configured in search.js (line 2) in the front end app. 
 
 - Front End
-
- - Configure API URL (line 2), this is the URL of your API deployment in API Gateway. Configure the school code (line 23), this is the school code imported as partition key in your DynamoDB table.}
+  - Configure API URL (line 2), this is the URL of your API deployment in API Gateway. Configure the school code (line 23), this is the school code imported as partition key in your DynamoDB table.}
