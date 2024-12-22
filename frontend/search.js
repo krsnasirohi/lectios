@@ -1,5 +1,5 @@
 // Update this variable to point to your domain.
-var apigatewayendpoint = 'Enter your API gateway endpoint URL here. See intructions';
+var apigatewayendpoint = '<Enter your API gateway endpoint URL here. See intructions>';
 var loadingdiv = $('#loading');
 var noresults = $('#noresults');
 var resultdiv = $('#results');
@@ -20,7 +20,7 @@ async function search() {
     if (query.length > 2) {
 
       // Make the HTTP request with the query as a parameter and wait for the JSON results
-      let response = await $.get(apigatewayendpoint, {  school: "*enter your partition key in DynamoDB here. See intructions.", expression: query, size: 5 }, 'json');
+      let response = await $.get(apigatewayendpoint, {  school: "<enter your partition key in DynamoDB here. See intructions.>", expression: query, size: 5 }, 'json');
 
       // Get the part of the JSON response that we care about
       let results = response;
