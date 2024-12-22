@@ -2,9 +2,9 @@ Lectios is a simple-to-implement online book catalog software for a library. A l
 
 Architecture
 
-- The project currently runs on AWS. The front end is HTML, CSS and JS and is hosted on S3 with a CloudFront based CDN in front. The backend is implemented using API Gateway, Lambda and DynamoDB. In this implementation all services are server-less, for easier maintenance, and lower costs for what would presumably be a low volume and intermittent usage. \
+- The project currently runs on AWS. The front end is HTML, CSS and JS and is hosted on S3 with a CloudFront based CDN in front. The backend is implemented using API Gateway, Lambda and DynamoDB. In this implementation all services are server-less, for easier maintenance, and lower costs for what would presumably be a low volume and intermittent usage. 
 
-Note: this project could be hosted elsewhere - the front end just needs an API to fetch books that match a search term; this API can be implemented on any cloud service.\
+Note: this project could be hosted elsewhere - the front end just needs an API to fetch books that match a search term; this API can be implemented on any cloud service.
 
 How to install
 
@@ -15,7 +15,7 @@ How to install
   - Implement a Lambda function with the code provided. Select runtime as NodeJS 18.x. 
 
 - API Gateway
-  - Deploy an API with a GET method for "/". The method request should have a required URL query string parameter "q". The integration request should have a mapping template: \{ "school": "$input.params('school')","expression": "$input.params('expression')"\}.
+  - Deploy an API with a GET method for "/". The method request should have a required URL query string parameter "q". The integration request should have a mapping template: { "school": "$input.params('school')","expression": "$input.params('expression')"}.
   - The URL of your API deployment should be configured in search.js (line 2) in the front end app. 
 
 - Front End
