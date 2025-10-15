@@ -1,3 +1,5 @@
+https://www.lectios.org/
+
 Lectios is a simple-to-implement online book catalog software for a library. A library just needs to upload a list of book titles and accession number, the software will display book details such as author(s), description, title and cover image with the help of Google's books API. Search is limited to title search, this allows for a simple database based system without the need for a full search engine.
 
 Architecture
